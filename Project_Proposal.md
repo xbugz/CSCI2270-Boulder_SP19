@@ -10,3 +10,10 @@ To the right will be players with higher points per game and to the left will be
 
 This method will be applied to different statistics that players can have. 
 
+Datastructures to be used:
+
+Heap
+BST
+LL (maybe)
+
+Getting data from nbastuffer.com
