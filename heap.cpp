@@ -2,9 +2,8 @@
 #include "heap.hpp"
 using namespace std;
 
-
-
-
+//HEAP IS NOT A MIN OR MAX HEAP IDK WHY!
+// Will fix this. Needs to be a max heap.
 Heap::Heap(int heapSize){
   heapSize = heapSize;
   heap = new float[heapSize];
