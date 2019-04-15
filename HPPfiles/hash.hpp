@@ -6,6 +6,7 @@ using namespace std;
 // Struct for a player
 struct player
 {
+  string name;
   int age; // player age
   string position; // player position
   int G;  // games played
