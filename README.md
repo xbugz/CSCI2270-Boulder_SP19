@@ -1,4 +1,3 @@
-# CSCI2270-Boulder_SP19
 Master branch of CSCI2270.
 Other branches:
 Project branch - a branch to submit all project codes, pdfs, etc..
