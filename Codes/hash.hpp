@@ -10,31 +10,31 @@ struct player
   int age; // player age
   string position; // player position
   string team;
-  int G;  // games played
-  int GS; // games started
-  int MP; // Minutes played
-  int FG; // Field goals
-  int FGA; // field goal attempts
+  float G;  // games played
+  float GS; // games started
+  float MP; // Minutes played
+  float FG; // Field goals
+  float FGA; // field goal attempts
   float FGP; // field goal percentage
-  int TP; // three pointers made
-  int TPA; // three pointers attemp
+  float TP; // three pointers made
+  float TPA; // three pointers attemp
   float TPPer; // three pointer percentage
-  int TWOP; // Two pointers field goal
-  int TWOPA; // two point field goal attemps
+  float TWOP; // Two pointers field goal
+  float TWOPA; // two point field goal attemps
   float TWOPPer; // two point field goal percentage
   float efg; // effective feild goal percentage
-  int FT; // free throws
-  int FTA; // free throw attempts
+  float FT; // free throws
+  float FTA; // free throw attempts
   float FTper; // free throw percentage
-  int ORB; // offensive reb
-  int DRB; // defensive rebounds
-  int TRB; // total rebounds
-  int ASS; // total assists
-  int STL; // steals
-  int BLK; // blocks
-  int TOV; // turnovers
+  float ORB; // offensive reb
+  float DRB; // defensive rebounds
+  float TRB; // total rebounds
+  float ASS; // total assists
+  float STL; // steals
+  float BLK; // blocks
+  float TOV; // turnovers
   float PF; //personal foul
-  int PTS; // points
+  float PTS; // points
 
 
 
@@ -104,6 +104,7 @@ class HashTable
     player* searchPlayer (string key);
 
     void printPlayerPG(player* player);
+    player* returnindex(int index);
 
 };
 #endif

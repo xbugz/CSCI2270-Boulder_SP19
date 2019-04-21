@@ -34,14 +34,14 @@ name2 =  getname(name);
   np->name = name2;
 //cout <<"TEST for Player: "<< name2 << endl;
   np->position = n[2];
-  np->age = stoi(n[3]);
+  np->age = stof(n[3]);
   np->team = n[4];
 
-  np->G = stoi(n[5]);
-  np->GS = stoi(n[6]);
-  np->MP = stoi(n[7]);
-  np->FG = stoi(n[8]);
-  np->FGA = stoi(n[9]);
+  np->G = stof(n[5]);
+  np->GS = stof(n[6]);
+  np->MP = stof(n[7]);
+  np->FG = stof(n[8]);
+  np->FGA = stof(n[9]);
 
   if (np->FG==0 && np->FGA==0) {
     np->FGP = 0;
@@ -49,25 +49,31 @@ name2 =  getname(name);
   else{
     np->FGP = stof(n[10]);
   }
-  np->TP = stoi(n[11]);
-  np->TPA = stoi(n[12]);
+  np->TP = stof(n[11]);
+  np->TPA = stof(n[12]);
   if (np->TP==0 && np->TPA==0) {
     np->TPPer = 0;
   }
   else{
     np->TPPer = stof(n[13]);
   }
-  np->TWOP = stoi(n[14]);
-  np->TWOPA = stoi(n[15]);
+  np->TWOP = stof(n[14]);
+  np->TWOPA = stof(n[15]);
   if (np->TWOP==0 && np->TWOPA==0) {
     np->TWOPPer = 0;
   }
   else{
     np->TWOPPer = stof(n[16]);
   }
-  np->efg = stof(n[17]);
-  np->FT = stoi(n[18]);
-  np->FTA = stoi(n[19]);
+  if(np->FGA == 0)
+  {
+    np->efg = 0;
+  }
+  else{
+    np->efg = stof(n[17]);
+  }
+  np->FT = stof(n[18]);
+  np->FTA = stof(n[19]);
 
   if (np->FT==0 && np->FTA==0) {
     np->FTper = 0;
@@ -75,16 +81,16 @@ name2 =  getname(name);
   else{
     np->FTper = stof(n[20]);
   }
-  np->ORB = stoi(n[21]);
-  np->DRB = stoi(n[22]);
-  np->TRB = stoi(n[23]);
-  np->ASS = stoi(n[24]);
-  np->STL = stoi(n[25]);
-  np->BLK = stoi(n[26]);
-  np->TOV = stoi(n[27]);
+  np->ORB = stof(n[21]);
+  np->DRB = stof(n[22]);
+  np->TRB = stof(n[23]);
+  np->ASS = stof(n[24]);
+  np->STL = stof(n[25]);
+  np->BLK = stof(n[26]);
+  np->TOV = stof(n[27]);
 
-  np->PF = stoi(n[28]);
-  np->PTS = stoi(n[29]);
+  np->PF = stof(n[28]);
+  np->PTS = stof(n[29]);
   return np;
 }
 
@@ -220,3 +226,13 @@ player* HashTable::searchPlayer (string key){
 
   return NULL;
 }
+
+player* HashTable::returnindex(int index){
+
+    if(hashTable[index]!=NULL) {
+      return hashTable[index];
+    }
+    else{
+      return NULL;
+      }
+    }

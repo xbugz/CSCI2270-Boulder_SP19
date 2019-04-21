@@ -19,6 +19,8 @@ void Heap::printHeap(){
     cout << heap[i] << endl;
   }
 }
+float Heap::getMax()
+{ return heap[0]; }
 
 void Heap::addToHeap (float value){
       if(currentSize != heapSize){
@@ -101,14 +103,14 @@ void Heap::repairUpward(int nodeIndex){
         }
 }
 
-bool checkpriority(int x, int y){
+bool checkpriority(int x, int y)
+{
     if(x < y){
        return false;
     }
     else{
       return true;
     }
-
 }
 
 void Heap::repairDownward(int nodeIndex)

@@ -13,7 +13,7 @@ class Heap
 	float peekValue();
 	bool isFull();
 	bool isEmpty();
-
+	float getMax();
 	private:
 
 	int parent(int nodeIndex);
